@@ -638,7 +638,7 @@ class B_MenuItemOption(B_MenuItemTextNoFX):
 
     OptionText=self.OptionText+" < "+str(self.Options[self.SelOption])+" >"
     self.SetText(OptionText)
-    nvda.SpeakText(OptionText)
+    # nvda.SpeakText(OptionText)
 
 
   def __del__(self):
@@ -668,6 +668,7 @@ class B_MenuItemOption(B_MenuItemTextNoFX):
       self.SelOption=self.SelOption% len(self.Options)
       OptionText=self.OptionText+" < "+self.Options[self.SelOption]+" >"
       self.SetText(OptionText)
+      nvda.SpeakText(OptionText)
 
       try: # Puede que Parent no herede de Frame
         self.Parent.RecalcLayout()
