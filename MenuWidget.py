@@ -638,7 +638,6 @@ class B_MenuItemOption(B_MenuItemTextNoFX):
 
     OptionText=self.OptionText+" < "+str(self.Options[self.SelOption])+" >"
     self.SetText(OptionText)
-    # nvda.SpeakText(OptionText)
 
 
   def __del__(self):
